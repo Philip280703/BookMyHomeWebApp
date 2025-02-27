@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BookMyHome.Shared.Domain.Models
+{
+	public class Bruger
+	{
+		Bruger() { }
+
+		public int BrugerID { get; private set; }
+		public string Fornavn { get; private set; } 
+		public string Efternavn { get; private set; }
+		public string TelefonNummer { get; private set; }
+		public string Email { get; private set; }
+		public bool Udlejer { get; private set; }
+
+		public List<Bolig> BoligList { get; private set; } = new List<Bolig>();
+		public List<Booking> BookingList { get; private set; } = new List<Booking>();
+
+
+	}
+}
