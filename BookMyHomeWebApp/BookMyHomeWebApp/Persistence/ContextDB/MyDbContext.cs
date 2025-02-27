@@ -6,9 +6,22 @@ namespace BookMyHomeWebApp.Persistence.ContextDB
 {
 	public class MyDbContext : DbContext
 	{
+		private readonly IConfiguration _configuration;
+
+		public MyDbContext()
+		{
+			var builder = new ConfigurationBuilder()
+				.SetBasePath(Directory.GetCurrentDirectory())
+				.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+				.AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: true); // Local overrides
+
+			_configuration = builder.Build();
+		}
+
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			
+			string connectionString = _configuration.GetConnectionString("DefaultConnection");
+			optionsBuilder.UseSqlServer(connectionString);
 		}
 
 
