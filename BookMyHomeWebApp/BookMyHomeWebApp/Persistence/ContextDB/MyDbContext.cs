@@ -9,7 +9,7 @@ namespace BookMyHomeWebApp.Persistence.ContextDB
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("Server=PHILIP-LAPTOP;Database=BookMyHomeDB;Trusted_Connection=True;TrustServerCertificate=True;");
+			optionsBuilder.UseSqlServer("Server=DESKTOP-FK73T41;Database=BookMyHome;Trusted_Connection=True;TrustServerCertificate=True;");
 
 		}
 
