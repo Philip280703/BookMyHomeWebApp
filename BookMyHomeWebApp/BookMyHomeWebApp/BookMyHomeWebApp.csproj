@@ -28,7 +28,6 @@
     <Folder Include="Command\" />
     <Folder Include="Migrations\" />
     <Folder Include="Persistence\API\" />
-    <Folder Include="Persistence\Repositories\" />
   </ItemGroup>
 
 </Project>
