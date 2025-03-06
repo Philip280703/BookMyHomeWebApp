@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,8 @@ namespace BookMyHome.Shared.Domain.Models
 		public List<Bolig> BoligList { get; private set; } = new List<Bolig>();
 		public List<Booking> BookingList { get; private set; } = new List<Booking>();
 
+		[Timestamp]
+		public byte[] Version { get; set; }
 
 	}
 }

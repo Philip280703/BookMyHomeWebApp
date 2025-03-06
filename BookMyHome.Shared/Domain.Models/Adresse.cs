@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,9 @@ namespace BookMyHome.Shared.Domain.Models
 		public string Note {  get; private set; }
 
 		public PostnummerOgBy ?PostnummerOgBy { get; private set; }
+
+		[Timestamp]
+		public byte[] Version { get; set; }
 
 	}
 }
