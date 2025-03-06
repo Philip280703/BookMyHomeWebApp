@@ -1,0 +1,50 @@
+﻿@page "/BookingPage"
+
+
+@using BookMyHome.Shared.Domain.Models
+@using BookMyHomeWebApp.Client.Child_Components
+
+
+<h3>Booking</h3>
+<p>Her kan du se en liste over alle bookings</p>
+
+<div class="table-container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>BookingID</th>
+				<th>GaesteID</th>
+				<th>BoligID</th>
+				<th>StartDato</th>
+				<th>SlutDato</th>
+				<th>Total Pris</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in BookingListe)
+			{
+				<RenderBookings booking="@item" />
+			}
+		</tbody>
+	</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@code {
+	private List<Booking> BookingListe = new List<Booking>();
+
+	private int ErrorCode { get; set; } = 0;
+
+}

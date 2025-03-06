@@ -1,0 +1,24 @@
+﻿@using BookMyHome.Shared.Domain.Models
+
+
+<tr class="hoverable-row">
+	<td>@booking.BookingID</td>
+	<td>@booking.GuestID</td>
+	<td>@booking.BoligID</td>
+	<td>@booking.StartDato</td>
+	<td>@booking.SlutDato</td>
+	<td>@booking.TotalPris</td>
+
+</tr>
+
+
+
+
+
+@code {
+
+	[Parameter]
+	public Booking booking { get; set; }
+
+
+}
