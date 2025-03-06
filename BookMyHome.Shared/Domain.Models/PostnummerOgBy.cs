@@ -14,5 +14,8 @@ namespace BookMyHome.Shared.Domain.Models
 		public int Postnummer { get; private set; }
 		public string Bynavn { get; private set; }
 
+
+		[Timestamp]
+		public byte[] Version { get; set; }
 	}
 }

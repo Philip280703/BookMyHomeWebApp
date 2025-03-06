@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,5 +20,7 @@ namespace BookMyHome.Shared.Domain.Models
 		public Bruger ?bruger { get; private set; }
 		public Bolig ?bolig { get; private set; }
 
+		[Timestamp]
+		public byte[] Version { get; set; }
 	}
 }
