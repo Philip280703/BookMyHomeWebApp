@@ -9,7 +9,8 @@ namespace BookMyHomeWebApp.Persistence.ContextDB
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("Server=MARK;Database=BookMyHome;Trusted_Connection=True;TrustServerCertificate=True;");
+			optionsBuilder.UseSqlServer(ConnString.GetConnString());
+
 		}
 
 		public DbSet<Bolig> BoligEF { get; set; }
