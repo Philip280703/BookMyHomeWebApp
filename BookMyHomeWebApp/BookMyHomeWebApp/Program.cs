@@ -1,6 +1,7 @@
 using BookMyHomeWebApp.Client.Pages;
 using BookMyHomeWebApp.Components;
 using BookMyHomeWebApp.Persistence.ContextDB;
+using BookMyHomeWebApp.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,16 @@ builder.Services.AddRazorComponents()
 builder.Services.AddDbContext<MyDbContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+
+
+// Add repository here
+
+builder.Services.AddScoped<IBookingRepository, BookingRepositorySql>();
+
+
+
+
+
 
 var app = builder.Build();
 
